@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BRAGARD ARMENIA | TABLIER խոհարարական համազգեստ</title>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+<meta name="description" content="BRAGARD ARMENIA - Պրոֆեսիոնալ խոհարարական համազգեստ TABLIER մոդել - 15 գույն">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#f5f7fa;display:flex;justify-content:center;align-items:flex-start;min-height:100vh;padding:20px 12px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+.product-card{max-width:428px;width:100%;background:#fff;border-radius:32px;box-shadow:0 10px 25px rgba(0,0,0,.06);overflow:hidden;padding:20px 18px 28px}
+.brand-logo{margin-bottom:16px;min-height:40px}
+.brand-logo img{width:120px;height:auto;display:block}
+.gallery-container{position:relative;width:100%;border-radius:24px;overflow:hidden;margin-bottom:16px;background:#fff;border:1px solid #f0f0f0}
+.gallery-scroll{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scroll-behavior:smooth;will-change:scroll-position}
+.gallery-scroll::-webkit-scrollbar{display:none}
+.gallery-item{flex:0 0 100%;scroll-snap-align:start;aspect-ratio:1/1.1;background:#fff;display:flex;align-items:center;justify-content:center}
+.gallery-item img{width:100%;height:100%;object-fit:contain;display:block;background:#fff;loading:lazy}
+.dot-indicators{display:flex;justify-content:center;gap:8px;margin:12px 0 16px;flex-wrap:wrap}
+.dot{width:6px;height:6px;border-radius:20px;background:#ddd;transition:.3s;cursor:pointer}
+.dot.active{width:22px;background:#ff0000}
+.product-title{margin:4px 0 16px}
+.product-title h1{font-size:26px;font-weight:700;color:#1a1a1a;line-height:1.2;margin-bottom:16px}
+.title-colors{display:grid;grid-template-columns:repeat(3, 1fr);gap:8px;margin-top:10px;max-height:none;overflow:visible}
+.title-color-item{display:flex;align-items:center;gap:6px;cursor:pointer;padding:8px 8px;border-radius:30px;transition:.25s;background:#fafafa;border:1px solid #f0f0f0;width:100%}
+.title-color-item:hover{background:#f5f5f5;border-color:#ddd}
+.title-circle{width:24px;height:24px;border-radius:50%;border:2px solid #fff;box-shadow:0 4px 10px rgba(0,0,0,.12);flex-shrink:0}
+
+.circle-1{background:#ffffff}
+.circle-2{background:#131313}
+.circle-3{background:#636363}
+.circle-4{background:#dec690}
+.circle-5{background:#016743}
+.circle-6{background:#af1414}
+.circle-7{background:#590c89}
+.circle-8{background:#f52a8f}
+.circle-9{background:#f7ff06}
+.circle-10{background:#2f2f2f}
+.circle-11{background:#23c1f5}
+.circle-12{background:#001057}
+.circle-13{background:#fe7513}
+.circle-14{background:#0a3f0d}
+.circle-15{background:#668b2a}
+
+.title-color-item span{font-size:12px;font-weight:600;color:#444;letter-spacing:.2px;word-break:break-word;line-height:1.2}
+.title-color-item.active{background:#f2f2f2;border-color:#f0f0f0}
+.title-color-item.active span{color:#ff0000}
+.detail-section{border-top:1px solid #f0f0f0;padding-top:20px}
+.detail-section h2{font-size:18px;font-weight:600;margin-bottom:12px;color:#333;display:flex;align-items:center;gap:8px}
+.detail-section h2 i{color:#ff0000;font-size:16px}
+.detail-section p{color:#4a4a4a;line-height:1.6;font-size:15px;margin-bottom:18px}
+.specs-panel{background:#f9f9f9;border-radius:24px;padding:20px;margin:20px 0 16px}
+.spec-item{display:flex;align-items:flex-start;gap:14px;margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid #e8e8e8}
+.spec-item:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+.spec-icon{width:40px;height:40px;background:#eaeaea;border-radius:14px;display:flex;align-items:center;justify-content:center;color:#555;font-size:18px;box-shadow:0 4px 8px rgba(0,0,0,.02);flex-shrink:0}
+.spec-content{flex:1}
+.spec-label{font-size:12px;font-weight:500;color:#888;text-transform:uppercase;margin-bottom:8px;letter-spacing:.3px}
+.spec-value{font-weight:500;font-size:16px;color:#222}
+.comp-item{display:flex;align-items:baseline;gap:8px;margin-bottom:8px;font-size:14px}
+.comp-code{font-weight:700;color:#ff0000;min-width:60px}
+.comp-text{color:#555}
+.contact-footer{margin-top:24px;padding-top:18px;border-top:1px solid #eee;display:flex;flex-direction:column;gap:10px}
+.contact-row{display:flex;align-items:center;padding:12px 16px;background:#f2f2f2;border-radius:16px;transition:.2s;border:1px solid transparent}
+.contact-row:hover{background:#fff;border-color:#d6d6d6;box-shadow:0 4px 10px rgba(0,0,0,.03)}
+.contact-icon{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-right:14px;flex-shrink:0;color:#fff}
+.wa-icon{background:#6b6b6b}
+.ig-icon{background:#7f7f7f}
+.contact-row a{color:#333;text-decoration:none;font-weight:500;font-size:15px;flex:1}
+
+@media(max-width:480px){
+.title-color-item span{font-size:11px}
+.title-circle{width:20px;height:20px}
+}
+
+@media(max-width:380px){
+.title-colors{grid-template-columns:repeat(2, 1fr)}
+.title-color-item{padding:8px 8px}
+.title-color-item span{font-size:12px}
+}
+</style>
+</head>
+<body>
+<div class="product-card">
+<div class="brand-logo" style="margin-top: 5px; margin-bottom: 0;">
+<img src="img/logo.jpg" alt="Bragard Armenia" width="120" height="40" onerror="this.style.display='none'">
+</div>
+
+<div class="gallery-container">
+<div class="gallery-scroll" id="galleryScroll">
+<div class="gallery-item"><img src="img/1.jpg" alt="Image 1" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/2.jpg" alt="Image 2" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/3.jpg" alt="Image 3" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/4.jpg" alt="Image 4" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/5.jpg" alt="Image 5" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/6.jpg" alt="Image 6" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/7.jpg" alt="Image 7" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/8.jpg" alt="Image 8" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/9.jpg" alt="Image 9" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/10.jpg" alt="Image 10" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/11.jpg" alt="Image 11" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/12.jpg" alt="Image 12" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/13.jpg" alt="Image 13" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/14.jpg" alt="Image 14" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/15.jpg" alt="Image 15" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/16.jpg" alt="Image 16" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/17.jpg" alt="Image 17" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/18.jpg" alt="Image 18" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/19.jpg" alt="Image 19" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/20.jpg" alt="Image 20" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/21.jpg" alt="Image 21" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/22.jpg" alt="Image 22" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/23.jpg" alt="Image 23" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/24.jpg" alt="Image 24" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/25.jpg" alt="Image 25" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/26.jpg" alt="Image 26" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/27.jpg" alt="Image 27" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/28.jpg" alt="Image 28" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/29.jpg" alt="Image 29" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/30.jpg" alt="Image 30" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/31.jpg" alt="Image 31" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/32.jpg" alt="Image 32" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/33.jpg" alt="Image 33" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/34.jpg" alt="Image 34" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/35.jpg" alt="Image 35" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/36.jpg" alt="Image 36" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/37.jpg" alt="Image 37" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/38.jpg" alt="Image 38" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/39.jpg" alt="Image 39" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/40.jpg" alt="Image 40" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/41.jpg" alt="Image 41" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/42.jpg" alt="Image 42" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/43.jpg" alt="Image 43" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/44.jpg" alt="Image 44" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/45.jpg" alt="Image 45" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/46.jpg" alt="Image 46" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/47.jpg" alt="Image 47" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/48.jpg" alt="Image 48" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/49.jpg" alt="Image 49" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/50.jpg" alt="Image 50" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/51.jpg" alt="Image 51" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/52.jpg" alt="Image 52" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/53.jpg" alt="Image 53" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/54.jpg" alt="Image 54" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/55.jpg" alt="Image 55" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/56.jpg" alt="Image 56" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/57.jpg" alt="Image 57" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/58.jpg" alt="Image 58" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/59.jpg" alt="Image 59" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/60.jpg" alt="Image 60" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/61.jpg" alt="Image 61" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/62.jpg" alt="Image 62" width="400" height="440" loading="lazy"></div>
+<div class="gallery-item"><img src="img/63.jpg" alt="Image 63" width="400" height="440" loading="lazy"></div>
+</div>
+<div class="dot-indicators" id="dotIndicators"></div>
+</div>
+
+<div class="product-title">
+<h1>ՏԱԲԼԻԵՐ / TABLIER</h1>
+<div class="title-colors" id="colorContainer">
+</div>
+</div>
+
+<div class="detail-section">
+<h2><i class="fas fa-info-circle"></i> Նկարագրություն</h2>
+<p>Յունիսեքս 
+խոհարարական  
+գոգնոց։Ունի կարգավորվող պարանոց, կապիչներ իրանի 
+հատվածում և 2 գրպան։Գոգնոցը առկա է 15 երանգով</p>
+
+<div class="specs-panel">
+<div class="spec-item">
+<div class="spec-icon"><i class="fas fa-ruler"></i></div>
+<div class="spec-content">
+<div class="spec-label">Երկարություն</div>
+<div class="spec-value">86 սմ</div>
+<div class="spec-label" style="margin-top:10px">Լայնություն</div>
+<div class="spec-value">62 սմ</div>
+</div>
+</div>
+
+<div class="spec-item">
+<div class="spec-icon"><i class="fas fa-tshirt"></i></div>
+<div class="spec-content">
+<div class="spec-label">Գործվածքի բաղադրություն</div>
+<div class="comp-item"><span class="comp-text">65% պոլիեսթեր, 35% բամբակ</span></div>
+</div>
+</div>
+</div>
+
+<div class="contact-footer">
+<div class="contact-row">
+<div class="contact-icon wa-icon"><i class="fab fa-whatsapp"></i></div>
+<a href="https://wa.me/37441446683?text=Բարև%20Ձեզ,%20հետաքրքրվում%20եմ%20TABLIER%20մոդելով" target="_blank" rel="noopener">
+WhatsApp +374 41 44 66 83
+</a>
+</div>
+<div class="contact-row">
+<div class="contact-icon ig-icon"><i class="fab fa-instagram"></i></div>
+<a href="https://instagram.com/bragard_armenia" target="_blank" rel="noopener">
+@bragard_armenia
+</a>
+</div>
+</div>
+</div>
+
+<script>
+(function() {
+const gallery = document.getElementById('galleryScroll');
+const dotsContainer = document.getElementById('dotIndicators');
+const colorContainer = document.getElementById('colorContainer');
+
+const colorItems = [
+{ code: 'CW188-WHT-000', class: 'circle-1', index: 0 },
+{ code: 'CW188-BLK-000', class: 'circle-2', index: 6 },
+{ code: 'CW188-GRY-000', class: 'circle-3', index: 10 },
+{ code: 'CW188-KHA-000', class: 'circle-4', index: 14 },
+{ code: 'CW188-KEL-000', class: 'circle-5', index: 18 },
+{ code: 'CW188-RED-000', class: 'circle-6', index: 23 },
+{ code: 'CW188-PUR-000', class: 'circle-7', index: 27 },
+{ code: 'CW188-HOT-000', class: 'circle-8', index: 32 },
+{ code: 'CW188-LEM-000', class: 'circle-9', index: 34 },
+{ code: 'CW188-NAV-000', class: 'circle-10', index: 39 },
+{ code: 'CW188-TUR-000', class: 'circle-11', index: 43 },
+{ code: 'CW188-ROY-000', class: 'circle-12', index: 47 },
+{ code: 'CW188-TAG-000', class: 'circle-13', index: 51 },
+{ code: 'CW188-HUN-000', class: 'circle-14', index: 56 },
+{ code: 'CW188-LIM-000', class: 'circle-15', index: 59 }
+];
+
+const totalGalleryImages = document.querySelectorAll('.gallery-item').length; // 63
+
+const maxDots = 5;
+let dotsHtml = '';
+for (let i = 0; i < maxDots; i++) {
+dotsHtml += `<span class="dot${i === 0 ? ' active' : ''}" data-index="${i}"></span>`;
+}
+dotsContainer.innerHTML = dotsHtml;
+
+let colorsHtml = '';
+colorItems.forEach((item, idx) => {
+colorsHtml += `
+<div class="title-color-item ${idx === 0 ? 'active' : ''}" data-gallery-index="${item.index}" data-item-index="${idx}">
+<div class="title-circle ${item.class}"></div>
+<span>${item.code}</span>
+</div>
+`;
+});
+colorContainer.innerHTML = colorsHtml;
+
+const dots = document.querySelectorAll('.dot');
+const titleColors = document.querySelectorAll('.title-color-item');
+
+function scrollToImage(index) {
+if (gallery && index >= 0 && index < totalGalleryImages) {
+gallery.scrollTo({
+left: index * gallery.clientWidth,
+behavior: 'smooth'
+});
+}
+}
+
+function getCurrentGalleryIndex() {
+if (!gallery) return 0;
+return Math.round(gallery.scrollLeft / gallery.clientWidth);
+}
+
+function updateActiveStates() {
+if (!gallery) return;
+
+const currentIndex = getCurrentGalleryIndex();
+
+// dots-երի թարմացում - 5 հատի համար
+// currentIndex-ը 0-62 է, բաժանում ենք 5 հավասար հատվածների
+const segmentSize = totalGalleryImages / maxDots; // 63/5 = 12.6
+let activeDotIndex = Math.floor(currentIndex / segmentSize);
+if (activeDotIndex >= maxDots) activeDotIndex = maxDots - 1;
+
+dots.forEach((dot, i) => {
+dot.classList.toggle('active', i === activeDotIndex);
+});
+
+// գույների ակտիվ վիճակի թարմացում
+titleColors.forEach(item => {
+const galleryIndex = parseInt(item.dataset.galleryIndex);
+if (galleryIndex === currentIndex) {
+item.classList.add('active');
+} else {
+item.classList.remove('active');
+}
+});
+}
+
+let scrollTimeout;
+gallery.addEventListener('scroll', () => {
+if (scrollTimeout) cancelAnimationFrame(scrollTimeout);
+scrollTimeout = requestAnimationFrame(updateActiveStates);
+}, { passive: true });
+
+dotsContainer.addEventListener('click', (e) => {
+const dot = e.target.closest('.dot');
+if (dot && dot.dataset.index) {
+const dotIndex = parseInt(dot.dataset.index);
+const segmentSize = totalGalleryImages / maxDots;
+let targetIndex = Math.floor(dotIndex * segmentSize + segmentSize / 2);
+if (targetIndex >= totalGalleryImages) targetIndex = totalGalleryImages - 1;
+scrollToImage(targetIndex);
+}
+});
+
+titleColors.forEach(item => {
+item.addEventListener('click', () => {
+const galleryIndex = parseInt(item.dataset.galleryIndex);
+if (!isNaN(galleryIndex)) {
+scrollToImage(galleryIndex);
+}
+});
+});
+
+let resizeTimeout;
+window.addEventListener('resize', () => {
+if (resizeTimeout) clearTimeout(resizeTimeout);
+resizeTimeout = setTimeout(() => {
+updateActiveStates();
+}, 100);
+});
+
+updateActiveStates();
+})();
+</script>
+</body>
+</html>
